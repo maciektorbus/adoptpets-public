@@ -1,0 +1,28 @@
+curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=745533240311170 \
+  -F client_secret=63b2535ceaf9e504703fffe763b2fc54 \
+  -F grant_type=authorization_code \
+  -F redirect_uri=https://adoptpets.dev/ \
+  -F code=AQA8DKwXEGSZ7yYdJqXK5s9cP_-AMgP95asbmEGFdLSmoLuAYkcUyXkvkqq3i9zN8ZSucgQrE9_YSykE_trDjZDirmU5DBnQdL0hf3XTOhMJ7YiTy3TBIkQ4MpSEckNzFIpnrbNySMJb62sD6QzpkbOFA3ur8ug5DxCSfFcAcShYRSzAYxKmSCZ84bGXRswMrd39k_1_U734sGv4QrLLcPDRHCW-DgtAwsb2v6QIxLBsng
+
+
+{"access_token": "IGQVJVNTQ1bjhfY0NfVC1YUXE1U09jZAm90c2g0X182aVJRNWwzZA182UmNOWXJZAMEQ3ZAEU1Y0x6VDdyRmRxb2ltQTVGVHdCbGs2TmtaSklKZAnpTZAW5PQlZAjT1hvbEZAkUDRBRGRLV2R6MURyazlJNmxHU0dvN2J6UllSZAlRr", "user_id": 17841400629506458}%  
+
+curl -X GET \
+  'https://graph.instagram.com/me?fields=id,username&access_token=IGQVJVNTQ1bjhfY0NfVC1YUXE1U09jZAm90c2g0X182aVJRNWwzZA182UmNOWXJZAMEQ3ZAEU1Y0x6VDdyRmRxb2ltQTVGVHdCbGs2TmtaSklKZAnpTZAW5PQlZAjT1hvbEZAkUDRBRGRLV2R6MURyazlJNmxHU0dvN2J6UllSZAlRr'
+
+
+
+curl -i -X GET "https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=63b2535ceaf9e504703fffe763b2fc54&access_token=IGQVJVNTQ1bjhfY0NfVC1YUXE1U09jZAm90c2g0X182aVJRNWwzZA182UmNOWXJZAMEQ3ZAEU1Y0x6VDdyRmRxb2ltQTVGVHdCbGs2TmtaSklKZAnpTZAW5PQlZAjT1hvbEZAkUDRBRGRLV2R6MURyazlJNmxHU0dvN2J6UllSZAlRr"
+
+
+{"access_token":"IGQVJVUGxxQ1BvU09rWVVMQlE2WHkzbHF4emY5YmpYWG9kM2JoOS1hMFo5SkxpQUxQNDhxOU9BcFlYc09SWGRPRmNkRlV2bmRDOG9jNmpjUUU5a2YzMjZApRFl6b0RMdEVLdnB1Unl3","token_type":"bearer","expires_in":5184000}% 
+
+
+curl -X GET \
+  'https://graph.instagram.com/me/media?fields=id,caption&access_token=IGQVJVUGxxQ1BvU09rWVVMQlE2WHkzbHF4emY5YmpYWG9kM2JoOS1hMFo5SkxpQUxQNDhxOU9BcFlYc09SWGRPRmNkRlV2bmRDOG9jNmpjUUU5a2YzMjZApRFl6b0RMdEVLdnB1Unl3'
+
+
+curl -X GET \
+  'https://graph.instagram.com/17929570466449869?fields=id,permalink,media_type,media_url,username,timestamp&access_token=IGQVJVUGxxQ1BvU09rWVVMQlE2WHkzbHF4emY5YmpYWG9kM2JoOS1hMFo5SkxpQUxQNDhxOU9BcFlYc09SWGRPRmNkRlV2bmRDOG9jNmpjUUU5a2YzMjZApRFl6b0RMdEVLdnB1Unl3'
